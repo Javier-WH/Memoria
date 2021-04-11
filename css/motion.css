@@ -11,14 +11,20 @@
     transform: var(--prespective) rotateY(0deg);
 }
 
-.frontFaceSpin,
-.card:hover {
+.frontFaceSpin {
     animation: frontFaceSpinFoward var(--time) forwards;
 }
 
-.backFaceSpin,
-.card:hover {
+.backFaceSpin {
     animation: backFaceSpinFoward var(--time) forwards;
+}
+
+.frontFaceGetBack {
+    animation: frontFaceBack var(--time) forwards;
+}
+
+.backFaceGetBack {
+    animation: backFaceBack var(--time) forwards;
 }
 
 @keyframes frontFaceSpinFoward {
@@ -31,6 +37,24 @@
 }
 
 @keyframes backFaceSpinFoward {
+    0% {
+        transform: var(--prespective) rotateY(180deg);
+    }
+    100% {
+        transform: var(--prespective) rotateY(0deg);
+    }
+}
+
+@keyframes frontFaceBack {
+    0% {
+        transform: var(--prespective) rotateY(-180deg);
+    }
+    100% {
+        transform: var(--prespective) rotateY(0deg);
+    }
+}
+
+@keyframes backFaceBack {
     0% {
         transform: var(--prespective) rotateY(0deg);
     }

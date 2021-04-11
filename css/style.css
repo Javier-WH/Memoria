@@ -1,3 +1,9 @@
+:root {
+    --logoSize: 5vw;
+    --cardSize: 9vw;
+    --boardSize: 60vw;
+}
+
 #mainContainer {
     position: absolute;
     left: 0;
@@ -11,17 +17,16 @@
 
 #gameBox {
     margin: auto;
-    width: 80vw;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-around;
+    text-align: center;
+    width: var(--boardSize);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .card {
     position: relative;
-    width: 8vw;
-    height: 8vw;
+    width: var(--cardSize);
+    height: var(--cardSize);
     margin: 5px 0px;
     transform-style: preserve-3d;
     border: 1px solid transparent;
@@ -29,7 +34,7 @@
 
 .face {
     position: absolute;
-    border: 1px solid black;
+    border: 2px solid darkgray;
     border-radius: 10%;
     top: 0;
     left: 0;
@@ -41,10 +46,21 @@
 
 .frontFace {
     z-index: 2;
-    background-color: blue;
+    background: linear-gradient(241deg, rgba(241, 63, 63, 1) 16%, rgba(26, 185, 227, 1) 42%, rgba(26, 114, 227, 1) 96%);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .backFace {
     z-index: 1;
     background-color: red;
+    background-repeat: no-repeat;
+    background-size: var(--cardSize) var(--cardSize);
+    background-position: center;
+}
+
+.frontFace>img {
+    width: var(--logoSize);
 }
