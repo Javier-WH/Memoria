@@ -1,0 +1,40 @@
+:root {
+    --time: 1s;
+    --prespective: perspective(700px);
+}
+
+.backFace {
+    transform: var(--prespective) rotateY(180deg);
+}
+
+.frontFace {
+    transform: var(--prespective) rotateY(0deg);
+}
+
+.frontFaceSpin,
+.card:hover {
+    animation: frontFaceSpinFoward var(--time) forwards;
+}
+
+.backFaceSpin,
+.card:hover {
+    animation: backFaceSpinFoward var(--time) forwards;
+}
+
+@keyframes frontFaceSpinFoward {
+    0% {
+        transform: var(--prespective) rotateY(0deg);
+    }
+    100% {
+        transform: var(--prespective) rotateY(-180deg);
+    }
+}
+
+@keyframes backFaceSpinFoward {
+    0% {
+        transform: var(--prespective) rotateY(0deg);
+    }
+    100% {
+        transform: var(--prespective) rotateY(180deg);
+    }
+}
