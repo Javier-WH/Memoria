@@ -36,6 +36,11 @@ body {
     margin: 5px 0px;
     transform-style: preserve-3d;
     border: 1px solid transparent;
+    border-radius: 10%;
+}
+
+.card:hover {
+    cursor: pointer;
 }
 
 .face {

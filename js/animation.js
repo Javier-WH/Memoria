@@ -30,10 +30,11 @@ function flipCards(index) {
 }
 
 
-
 function getCardsIndex(index) {
     cardsSelected++;
-
+    let randonSound1 = Math.round(Math.random() * 1);
+    let sound = new Audio(`mp3/step${randonSound1}.mp3`);
+    sound.play();
     if (cardsSelected == 1) {
         card1Index = index;
         cards[card1Index].style.pointerEvents = "none";
@@ -49,7 +50,13 @@ function getCardsIndex(index) {
             cards[card1Index].querySelector(".frontFace").classList.add("DISCOVERED");
             cards[card2Index].querySelector(".frontFace").classList.add("DISCOVERED");
             aciertos++;
-            console.log(aciertos);
+
+            let randonSound2 = Math.round(Math.random() * 3);
+            let sound2 = new Audio(`mp3/win${randonSound2}.mp3`);
+            sound2.play();
+
+
+
 
             ////esto corrige un bug que permitia mostrar 3 cartas si se presionaba rapidamente click sobre las cartas
             cardsSelected = 1000;
