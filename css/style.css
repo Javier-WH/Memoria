@@ -2,6 +2,11 @@
     --logoSize: 5vw;
     --cardSize: 9vw;
     --boardSize: 60vw;
+    --colorOscuro: rgb(54, 48, 48);
+}
+
+body {
+    background-color: var(--colorOscuro);
 }
 
 #mainContainer {
@@ -13,6 +18,7 @@
     display: flex;
     text-align: center;
     justify-content: center;
+    background-image: url("../img/wallpaper2.jpg");
 }
 
 #gameBox {
@@ -34,7 +40,7 @@
 
 .face {
     position: absolute;
-    border: 2px solid darkgray;
+    border: 2px solid var(--colorOscuro);
     border-radius: 10%;
     top: 0;
     left: 0;
@@ -46,7 +52,8 @@
 
 .frontFace {
     z-index: 2;
-    background: linear-gradient(241deg, rgba(241, 63, 63, 1) 16%, rgba(26, 185, 227, 1) 42%, rgba(26, 114, 227, 1) 96%);
+    background: var(--colorOscuro);
+    border: 2px solid white;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -63,4 +70,15 @@
 
 .frontFace>img {
     width: var(--logoSize);
+    filter: grayscale(1) invert(1)
+}
+
+#marcador {
+    text-align: center;
+    font-size: larger;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    background-color: var(--colorOscuro);
+    padding: 10px 0;
+    border-radius: 10%;
 }
