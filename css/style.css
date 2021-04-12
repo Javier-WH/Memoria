@@ -75,15 +75,28 @@ body {
 
 .frontFace>img {
     width: var(--logoSize);
-    filter: grayscale(1) invert(1)
+    filter: grayscale(1) invert(1);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 #marcador {
+    z-index: 100;
     text-align: center;
     font-size: larger;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Zen Dots', cursive;
     color: white;
     background-color: var(--colorOscuro);
     padding: 10px 0;
-    border-radius: 10%;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    position: relative;
+    top: 0;
+    margin: auto;
 }

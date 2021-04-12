@@ -2,10 +2,11 @@
 
 // console.log(Math.round(Math.random() * 20) - 1)
 
+
+
 window.addEventListener("load", () => {
     setImages();
     setImages();
-
 })
 
 
@@ -25,3 +26,16 @@ function setImages() {
         }
     }
 }
+
+
+///bacground music
+
+const BGMusic = new Audio("mp3/music.mp3");
+
+const body = document.querySelector("#gameBox");
+
+body.addEventListener("mouseover", () => {
+
+    BGMusic.play();
+
+})
