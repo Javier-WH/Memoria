@@ -44,5 +44,24 @@ body.addEventListener("mouseover", () => {
 //btnplayagain
 
 document.getElementById("btnAgain").addEventListener("click", () => {
-    location.reload();
+    // location.reload();
+
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].querySelector(".frontFace").classList.remove("DISCOVERED")
+        cards[i].querySelector(".backFace").classList.remove("IMG")
+        flipCards(i);
+    }
+
+    card1Index = null;
+    card2Index = null;
+    cardsSelected = 0;
+    aciertos = 0;
+    intentos = 0;
+    showWinScreen.style.display = "none";
+    document.getElementById("marcador").innerText = `Attempts: ${intentos}`
+    setTimeout(() => {
+        setImages();
+        setImages();
+    }, 500);
+
 })

@@ -108,10 +108,32 @@ body {
     background: linear-gradient(328deg, rgba(255, 255, 255, 0) 0%, var(--colorOscuro) 40%, var(--colorOscuro) 60%, rgba(255, 255, 255, 0) 100%);
     color: white;
     font-family: 'Zen Dots', cursive;
+    font-size: larger;
     display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+#win>#Attempts {
+    font-size: small;
+}
+
+#btnAgain {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-family: 'Zen Dots', cursive;
+    padding: 5px;
+    border-radius: 10%;
+}
+
+#btnAgain:hover {
+    background-color: white;
+    border: 1px solid white;
+    color: var(--colorOscuro);
+    font-family: 'Zen Dots', cursive;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 300px) and (min-width: 100px) {

@@ -45,7 +45,8 @@ function getCardsIndex(index) {
 
         } else if (cardsSelected == 2) {
             intentos++;
-            document.getElementById("marcador").innerText = `Intentos: ${intentos}` //marcador
+            document.getElementById("marcador").innerText = `Attempts: ${intentos}` //marcador
+            document.getElementById("Attempts").innerText = `Attempts: ${intentos}`
             card2Index = index;
             let imagen1 = cards[card1Index].querySelector(".backFace").id;
             let imagen2 = cards[card2Index].querySelector(".backFace").id;
