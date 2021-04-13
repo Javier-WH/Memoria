@@ -36,7 +36,6 @@ BGMusic.volume = 0.4;
 const body = document.querySelector("#gameBox");
 
 body.addEventListener("mouseover", () => {
-
     BGMusic.play();
 
 })
@@ -59,6 +58,9 @@ document.getElementById("btnAgain").addEventListener("click", () => {
     intentos = 0;
     showWinScreen.style.display = "none";
     document.getElementById("marcador").innerText = `Attempts: ${intentos}`
+    BGMusic.pause();
+    BGMusic.currentTime = 0;
+    BGMusic.play;
     setTimeout(() => {
         setImages();
         setImages();
