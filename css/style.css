@@ -7,27 +7,21 @@
 
 body {
     background-color: var(--colorOscuro);
-    background-image: url("../img/wallpaper2.jpg");
+    background: url("../img/wallpaper2.jpg");
 }
 
 #mainContainer {
-    margin: auto;
     position: absolute;
-    left: 0;
-    right: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
 }
 
 #gameBox {
     margin: auto;
-    text-align: center;
     width: var(--boardSize);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .card {
@@ -85,20 +79,53 @@ body {
 }
 
 #marcador {
-    width: 20%;
-    border-radius: 20%;
-    border: 2px solid white;
+    width: 100%;
     text-align: center;
     font-size: larger;
     font-family: 'Zen Dots', cursive;
     color: white;
-    background-color: var(--colorOscuro);
+    background: linear-gradient(328deg, rgba(255, 255, 255, 0) 0%, var(--colorOscuro) 40%, var(--colorOscuro) 60%, rgba(255, 255, 255, 0) 100%);
     padding: 10px 10px;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    position: fixed;
-    top: 0;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-bottom: 2.5%;
+}
+
+@media screen and (max-width: 300px) and (min-width: 100px) {
+     :root {
+        --logoSize: 15vw;
+        --cardSize: 26vw;
+        --boardSize: 100%;
+    }
+    #gameBox {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 730px) and (min-width: 300px) {
+     :root {
+        --logoSize: 10vw;
+        --cardSize: 20vw;
+        --boardSize: 100%;
+    }
+    #gameBox {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 1260px) and (min-width: 730px) {
+     :root {
+        --logoSize: 7vw;
+        --cardSize: 15vw;
+        --boardSize: 80%;
+    }
+    #gameBox {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
