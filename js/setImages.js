@@ -31,6 +31,7 @@ function setImages() {
 ///bacground music
 
 const BGMusic = new Audio("mp3/music.mp3");
+BGMusic.volume = 0.4;
 
 const body = document.querySelector("#gameBox");
 

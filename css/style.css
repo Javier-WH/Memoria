@@ -1,15 +1,17 @@
 :root {
     --logoSize: 5vw;
     --cardSize: 9vw;
-    --boardSize: 60vw;
+    --boardSize: 50%;
     --colorOscuro: rgb(54, 48, 48);
 }
 
 body {
     background-color: var(--colorOscuro);
+    background-image: url("../img/wallpaper2.jpg");
 }
 
 #mainContainer {
+    margin: auto;
     position: absolute;
     left: 0;
     right: 0;
@@ -18,7 +20,6 @@ body {
     display: flex;
     text-align: center;
     justify-content: center;
-    background-image: url("../img/wallpaper2.jpg");
 }
 
 #gameBox {
@@ -84,19 +85,20 @@ body {
 }
 
 #marcador {
-    z-index: 100;
+    width: 20%;
+    border-radius: 20%;
+    border: 2px solid white;
     text-align: center;
     font-size: larger;
     font-family: 'Zen Dots', cursive;
     color: white;
     background-color: var(--colorOscuro);
-    padding: 10px 0;
+    padding: 10px 10px;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    position: relative;
+    position: fixed;
     top: 0;
-    margin: auto;
 }
