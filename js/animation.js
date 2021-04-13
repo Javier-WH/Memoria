@@ -1,4 +1,5 @@
 const cards = document.getElementsByClassName("card");
+const showWinScreen = document.getElementById("win");
 const showCards = 2500;
 let card1Index = null,
     card2Index = null,
@@ -59,6 +60,11 @@ function getCardsIndex(index) {
                 let randonSound2 = Math.round(Math.random() * 3);
                 let sound2 = new Audio(`mp3/win${randonSound2}.mp3`);
                 sound2.play();
+
+
+                if (aciertos == 10) {
+                    showWinScreen.style.display = "flex";
+                }
 
 
 

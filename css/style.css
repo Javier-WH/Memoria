@@ -17,6 +17,7 @@ body {
 }
 
 #gameBox {
+    position: relative;
     margin: auto;
     width: var(--boardSize);
     display: grid;
@@ -97,6 +98,22 @@ body {
     margin-bottom: 2.5%;
 }
 
+#win {
+    z-index: 1001;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(328deg, rgba(255, 255, 255, 0) 0%, var(--colorOscuro) 40%, var(--colorOscuro) 60%, rgba(255, 255, 255, 0) 100%);
+    color: white;
+    font-family: 'Zen Dots', cursive;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 @media screen and (max-width: 300px) and (min-width: 100px) {
      :root {
         --logoSize: 15vw;
@@ -129,6 +146,3 @@ body {
         grid-template-columns: repeat(5, 1fr);
     }
 }
-
-
-/* sdsd */

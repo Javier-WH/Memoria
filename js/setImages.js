@@ -40,3 +40,9 @@ body.addEventListener("mouseover", () => {
     BGMusic.play();
 
 })
+
+//btnplayagain
+
+document.getElementById("btnAgain").addEventListener("click", () => {
+    location.reload();
+})
