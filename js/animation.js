@@ -34,7 +34,7 @@ function flipCards(index) {
 
 function getCardsIndex(index) {
     if (!cards[index].querySelector(".frontFace").classList.contains("DISCOVERED")) {
-        cardsSelected++;
+        cardsSelected++; //para cotrolar el numero de cartas seleccionada
         let randonSound1 = Math.round(Math.random() * 1);
         let sound = new Audio(`mp3/step${randonSound1}.mp3`);
         sound.play();
@@ -43,6 +43,8 @@ function getCardsIndex(index) {
             cards[card1Index].style.pointerEvents = "none";
 
         } else if (cardsSelected == 2) {
+            intentos++;
+            document.getElementById("marcador").innerText = `Intentos: ${intentos}` //marcador
             card2Index = index;
             let imagen1 = cards[card1Index].querySelector(".backFace").id;
             let imagen2 = cards[card2Index].querySelector(".backFace").id;
@@ -70,8 +72,6 @@ function getCardsIndex(index) {
                 }, 300);
                 ////////////////////////////////////////////////////////////////////////////////////
             } else {
-                intentos++;
-                document.getElementById("marcador").innerText = `Intentos: ${intentos}`
                 cardsSelected = 1000;
                 setTimeout(() => {
                     cardsSelected = 0;
