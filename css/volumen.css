@@ -1,0 +1,18 @@
+#volumenContainer{
+    position: absolute;
+    z-index: 2000;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    filter: grayscale(1) invert(1);
+}
+
+#volumenIcon{
+    width: 3.5vw;
+    filter: grayscale(1) invert(1);
+    cursor: pointer;
+}
+#volumenBar{
+    width: 90%;
+    
+}

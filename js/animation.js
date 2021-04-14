@@ -1,3 +1,10 @@
+let randonSound1 = Math.round(Math.random() * 1);
+let sound = new Audio(`mp3/step${randonSound1}.mp3`);
+let randonSound2 = Math.round(Math.random() * 3);
+let sound2 = new Audio(`mp3/win${randonSound2}.mp3`);
+
+
+
 const cards = document.getElementsByClassName("card");
 const showWinScreen = document.getElementById("win");
 const showCards = 2500;
@@ -36,9 +43,10 @@ function flipCards(index) {
 function getCardsIndex(index) {
     if (!cards[index].querySelector(".frontFace").classList.contains("DISCOVERED")) {
         cardsSelected++; //para cotrolar el numero de cartas seleccionada
-        let randonSound1 = Math.round(Math.random() * 1);
-        let sound = new Audio(`mp3/step${randonSound1}.mp3`);
-        sound.play();
+         randonSound1 = Math.round(Math.random() * 1);
+         sound = new Audio(`mp3/step${randonSound1}.mp3`);
+        setVolumen();
+         sound.play();
         if (cardsSelected == 1) {
             card1Index = index;
             cards[card1Index].style.pointerEvents = "none";
@@ -52,14 +60,16 @@ function getCardsIndex(index) {
             let imagen2 = cards[card2Index].querySelector(".backFace").id;
             cardsSelected = 0;
             document.querySelector("*").style.pointerEvents = "none";
+            Vbar.style.pointerEvents = "auto";
+            VIcon.style.pointerEvents = "auto";
 
             if (imagen1 == imagen2) {
                 cards[card1Index].querySelector(".frontFace").classList.add("DISCOVERED");
                 cards[card2Index].querySelector(".frontFace").classList.add("DISCOVERED");
                 aciertos++;
 
-                let randonSound2 = Math.round(Math.random() * 3);
-                let sound2 = new Audio(`mp3/win${randonSound2}.mp3`);
+                randonSound2 = Math.round(Math.random() * 3);
+                setVolumen();
                 sound2.play();
 
 

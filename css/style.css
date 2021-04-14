@@ -135,36 +135,3 @@ body {
     font-family: 'Zen Dots', cursive;
     cursor: pointer;
 }
-
-@media screen and (max-width: 300px) and (min-width: 100px) {
-     :root {
-        --logoSize: 15vw;
-        --cardSize: 26vw;
-        --boardSize: 100%;
-    }
-    #gameBox {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media screen and (max-width: 730px) and (min-width: 300px) {
-     :root {
-        --logoSize: 10vw;
-        --cardSize: 20vw;
-        --boardSize: 100%;
-    }
-    #gameBox {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media screen and (max-width: 1260px) and (min-width: 730px) {
-     :root {
-        --logoSize: 7vw;
-        --cardSize: 15vw;
-        --boardSize: 80%;
-    }
-    #gameBox {
-        grid-template-columns: repeat(5, 1fr);
-    }
-}

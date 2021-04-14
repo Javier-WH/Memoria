@@ -11,18 +11,27 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
-
-
+    
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/motion.css">
+    <link rel="stylesheet" href="css/volumen.css">
+    <link rel="stylesheet" href="css/querys.css">
 
     <script src="js/animation.js" defer></script>
     <script src="js/setImages.js" defer></script>
+    <script src="js/volumen.js" defer></script>
     <title>Document</title>
 </head>
 
 <body>
-    <div id="marcador">Attempts: 0</div>
+    <div id="volumenContainer">
+        <img src="img/volumenIcon.png" alt="" id="volumenIcon">
+        <input type="range" id="volumenBar" min="0" max="50">
+    </div>
+    <div id="marcador">
+        <p>Attempts: 0</p>
+    </div>
     <div id="mainContainer">
         <div id="gameBox">
             <div id="win">
