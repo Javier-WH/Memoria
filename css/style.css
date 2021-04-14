@@ -86,7 +86,7 @@ body {
     font-family: 'Zen Dots', cursive;
     color: white;
     background: linear-gradient(328deg, rgba(255, 255, 255, 0) 0%, var(--colorOscuro) 40%, var(--colorOscuro) 60%, rgba(255, 255, 255, 0) 100%);
-    padding: 10px 10px;
+    padding: 20px 10px;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
