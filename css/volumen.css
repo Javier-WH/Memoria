@@ -13,5 +13,8 @@
 }
 #volumenBar{
     width: 100%;
-    
+    display: none;
+}
+#volumenContainer:hover #volumenBar{
+    display: block;
 }

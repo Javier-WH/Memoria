@@ -7,6 +7,13 @@ function setVolumen(){
     BGMusic.volume = (Vbar.value /50);
     sound.volume =  (Vbar.value /50);
     sound2.volume =  (Vbar.value /50);
+
+    if(Vbar.value == 0){
+        VIcon.src = "img/volumenIcon2.png";
+    }
+    else{
+        VIcon.src = "img/volumenIcon.png";
+    }
 }
 
 Vbar.addEventListener("input", ()=>setVolumen());
